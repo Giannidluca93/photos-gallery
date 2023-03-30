@@ -1,5 +1,10 @@
 import type { AppProps } from "next/app";
 
+import { ThemeProvider } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
+
+import { MainTheme } from "themes";
+
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
@@ -9,8 +14,11 @@ const roboto = Roboto({
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <main className={roboto.className}>
-      <Component {...pageProps} />
-    </main>
+    <ThemeProvider theme={MainTheme}>
+      <main className={roboto.className}>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </main>
+    </ThemeProvider>
   );
 }
