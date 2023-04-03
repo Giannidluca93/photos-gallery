@@ -1,10 +1,10 @@
 {
   "categories": [
-    { "id": 1, "title": "panoramas", "profile-img": "https://random.imagecdn.app/150/150" },
-     { "id": 2, "title": "profiles", "profile-img": "https://random.imagecdn.app/150/150" },
-     { "id": 3, "title": "Animals", "profile-img": "https://random.imagecdn.app/150/150" },
-         { "id": 4, "title": "Models", "profile-img": "https://random.imagecdn.app/150/150" },
-     { "id": 5, "title": "Books", "profile-img": "https://random.imagecdn.app/150/150" },
-     { "id": 6, "title": "Houses", "profile-img": "https://random.imagecdn.app/150/150" }
+    { "id": 1, "title": "panoramas", "profileImg": "https://random.imagecdn.app/600/600" },
+     { "id": 2, "title": "profiles", "profileImg": "https://random.imagecdn.app/600/600" },
+     { "id": 3, "title": "Animals", "profileImg": "https://random.imagecdn.app/600/600" },
+         { "id": 4, "title": "Models", "profileImg": "https://random.imagecdn.app/600/600" },
+     { "id": 5, "title": "Books", "profileImg": "https://random.imagecdn.app/600/600" },
+     { "id": 6, "title": "Houses", "profileImg": "https://random.imagecdn.app/600/600" }
   ]
 }
