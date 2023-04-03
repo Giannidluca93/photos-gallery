@@ -1,14 +1,34 @@
+import { GetServerSideProps, NextPage } from "next";
+
 import { MainLayout } from "@/components/layouts";
+import Categories from "@/components/Categories";
 
-import Typography from "@mui/material/Typography";
+import { axiosInstance } from "api/api";
 
-export default function Home() {
+import { ICategory } from "interfaces";
+
+interface Props {
+  categories: ICategory[];
+}
+
+const Home: NextPage<Props> = ({ categories }) => {
   return (
     <MainLayout
       title={"Photo Gallery - Home"}
       pageDescription={"Photos categories"}
     >
-      <Typography variant="h1">HelloWorld</Typography>;
+      <Categories categories={categories} />
     </MainLayout>
   );
-}
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const categories = await axiosInstance.get("/categories");
+  return {
+    props: {
+      categories: categories.data,
+    },
+  };
+};
+
+export default Home;
