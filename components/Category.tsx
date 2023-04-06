@@ -18,11 +18,7 @@ const Category: FC<Props> = ({ category }) => {
   return (
     <Grid item xs={12} sm={4}>
       <Box display="flex" flexDirection="column" alignItems="center">
-        <NextLink
-          href={`/categories/${category.title}`}
-          passHref
-          legacyBehavior
-        >
+        <NextLink href={`/categories/${category.slug}`} passHref legacyBehavior>
           <Link color="text.secondary">
             <Image
               src={category.profileImg}
