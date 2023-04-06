@@ -3,4 +3,5 @@ export interface ICategory {
   title: string;
   profileImg: string;
   slug: string;
+  images: string[];
 }
