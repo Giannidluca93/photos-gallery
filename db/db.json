@@ -1,10 +1,11 @@
 {
   "categories": [
-    { "id": 1, "title": "panoramas", "profileImg": "https://random.imagecdn.app/600/600" },
-     { "id": 2, "title": "profiles", "profileImg": "https://random.imagecdn.app/600/600" },
-     { "id": 3, "title": "Animals", "profileImg": "https://random.imagecdn.app/600/600" },
-         { "id": 4, "title": "Models", "profileImg": "https://random.imagecdn.app/600/600" },
-     { "id": 5, "title": "Books", "profileImg": "https://random.imagecdn.app/600/600" },
-     { "id": 6, "title": "Houses", "profileImg": "https://random.imagecdn.app/600/600" }
-  ]
+    { "id": 1, "title": "panoramas", "profileImg": "https://random.imagecdn.app/600/600", "slug": "panoramas", "images": ["https://random.imagecdn.app/600/600" , "https://random.imagecdn.app/600/600"] },
+     { "id": 2, "title": "profiles", "profileImg": "https://random.imagecdn.app/600/600", "slug": "profiles", "images": ["https://random.imagecdn.app/600/600" , "https://random.imagecdn.app/600/600"] },
+     { "id": 3, "title": "Animals", "profileImg": "https://random.imagecdn.app/600/600", "slug": "animals", "images": ["https://random.imagecdn.app/600/600" , "https://random.imagecdn.app/600/600"] },
+         { "id": 4, "title": "Models", "profileImg": "https://random.imagecdn.app/600/600", "slug": "models", "images": ["https://random.imagecdn.app/600/600" , "https://random.imagecdn.app/600/600"] },
+     { "id": 5, "title": "Books", "profileImg": "https://random.imagecdn.app/600/600", "slug": "books", "images": ["https://random.imagecdn.app/600/600" , "https://random.imagecdn.app/600/600"] },
+     { "id": 6, "title": "Houses", "profileImg": "https://random.imagecdn.app/600/600", "slug": "houses", "images": ["https://random.imagecdn.app/600/600" , "https://random.imagecdn.app/600/600"] }
+  ],
+  "slugs": ["panoramas", "profiles", "animals", "models", "books", "houses"]
 }
