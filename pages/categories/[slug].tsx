@@ -2,11 +2,16 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
 import { AxiosResponse } from "axios";
 
-import { MainLayout } from "@/components/layouts";
-
 import { axiosInstance } from "api/api";
 
+import { MainLayout } from "@/components/layouts";
+
 import { ICategory } from "interfaces";
+
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import { Typography } from "@mui/material";
+import CategoryImage from "@/components/CategoryImage";
 
 interface Props {
   category: ICategory;
@@ -14,8 +19,26 @@ interface Props {
 
 const CategoryPage: NextPage<Props> = ({ category }) => {
   return (
-    <MainLayout title={`Category: test`} pageDescription={"Category images"}>
-      <h1>{category.title}</h1>
+    <MainLayout
+      title={`Category: ${category.title}`}
+      pageDescription={"Category images"}
+    >
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Box sx={{ textTransform: "capitalize" }}>
+            <Typography align="center" variant="h2" component="h2">
+              {category.title}
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid item xs={12}>
+          <Box display="flex" justifyContent="center">
+            {category.images.map((image) => {
+              return <CategoryImage image={image} />;
+            })}
+          </Box>
+        </Grid>
+      </Grid>
     </MainLayout>
   );
 };
