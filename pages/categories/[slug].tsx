@@ -5,13 +5,14 @@ import { AxiosResponse } from "axios";
 import { axiosInstance } from "api/api";
 
 import { MainLayout } from "@/components/layouts";
+import CategoryImage from "@/components/CategoryImage";
 
 import { ICategory } from "interfaces";
 
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { Typography } from "@mui/material";
-import CategoryImage from "@/components/CategoryImage";
+import CategoryModal from "@/components/CategoryModal";
 
 interface Props {
   category: ICategory;
@@ -34,10 +35,11 @@ const CategoryPage: NextPage<Props> = ({ category }) => {
         <Grid item xs={12}>
           <Box display="flex" justifyContent="center">
             {category.images.map((image) => {
-              return <CategoryImage image={image} />;
+              return <CategoryImage key={image} image={image} />;
             })}
           </Box>
         </Grid>
+        <CategoryModal />
       </Grid>
     </MainLayout>
   );
