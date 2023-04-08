@@ -39,7 +39,6 @@ const CategoryPage: NextPage<Props> = ({ category }) => {
             })}
           </Box>
         </Grid>
-        <CategoryModal />
       </Grid>
     </MainLayout>
   );
