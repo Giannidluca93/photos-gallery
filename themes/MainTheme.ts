@@ -8,6 +8,14 @@ export const MainTheme = createTheme({
     MuiLink: {
       defaultProps: {
         underline: "none",
+        color: "text.secondary",
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "white",
+        },
       },
     },
   },
