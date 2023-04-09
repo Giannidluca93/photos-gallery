@@ -1,5 +1,12 @@
-import Head from "next/head";
 import { FC, ReactNode } from "react";
+
+import Head from "next/head";
+import NextLink from "next/link";
+
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Link from "@mui/material/Link";
 
 interface Props {
   children: ReactNode;
@@ -26,10 +33,30 @@ export const MainLayout: FC<Props> = ({
 
         {imageFullUrl && <meta name="og:image" content={imageFullUrl} />}
       </Head>
-      {/* <nav>navbar</nav> */}
-      {/* sidemenu */}
-      <main>{children}</main>
-      <footer>{/* todo custom footer */}</footer>
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Box display="flex" justifyContent="space-between">
+            <Box display="flex" justifyContent="flex-end">
+              <Toolbar>
+                <NextLink href="/" passHref legacyBehavior>
+                  <Link>Home</Link>
+                </NextLink>
+              </Toolbar>
+            </Box>
+            <Box display="flex" justifyContent="flex-end">
+              <Toolbar>
+                <NextLink href="/about" passHref legacyBehavior>
+                  <Link>About</Link>
+                </NextLink>
+              </Toolbar>
+            </Box>
+          </Box>
+        </AppBar>
+      </Box>
+
+      <Box display="flex" justifyContent="center" alignItems="center" mt={5}>
+        {children}
+      </Box>
     </>
   );
 };
