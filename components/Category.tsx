@@ -17,14 +17,14 @@ interface Props {
 const Category: FC<Props> = ({ category }) => {
   return (
     <Grid item xs={12} sm={4}>
-      <Box display="flex" flexDirection="column" alignItems="center">
+      <Box display="flex" flexDirection="column" alignItems="center" m={2}>
         <NextLink href={`/categories/${category.slug}`} passHref legacyBehavior>
           <Link color="text.secondary">
             <Image
               src={category.profileImg}
               alt={category.title}
-              width={150}
-              height={150}
+              width={300}
+              height={300}
             />
             <Typography variant="subtitle1" align="center">
               {category.title}
