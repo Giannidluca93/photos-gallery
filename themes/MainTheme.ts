@@ -5,6 +5,13 @@ export const MainTheme = createTheme({
     mode: "light",
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        html: {
+          minHeight: "100%",
+        },
+      },
+    },
     MuiLink: {
       defaultProps: {
         underline: "none",

@@ -33,29 +33,40 @@ export const MainLayout: FC<Props> = ({
 
         {imageFullUrl && <meta name="og:image" content={imageFullUrl} />}
       </Head>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
-          <Box display="flex" justifyContent="space-between">
-            <Box display="flex" justifyContent="flex-end">
-              <Toolbar>
-                <NextLink href="/" passHref legacyBehavior>
-                  <Link>Home</Link>
-                </NextLink>
-              </Toolbar>
-            </Box>
-            <Box display="flex" justifyContent="flex-end">
-              <Toolbar>
-                <NextLink href="/about" passHref legacyBehavior>
-                  <Link>About</Link>
-                </NextLink>
-              </Toolbar>
-            </Box>
-          </Box>
-        </AppBar>
-      </Box>
 
-      <Box display="flex" justifyContent="center" alignItems="center" mt={5}>
-        {children}
+      <Box display="flex" flexDirection="column" height="100vh">
+        <Box>
+          {" "}
+          <AppBar position="static">
+            <Box display="flex" justifyContent="space-between">
+              <Box display="flex" justifyContent="flex-end">
+                <Toolbar>
+                  <NextLink href="/" passHref legacyBehavior>
+                    <Link>Home</Link>
+                  </NextLink>
+                </Toolbar>
+              </Box>
+              <Box display="flex" justifyContent="flex-end">
+                <Toolbar>
+                  <NextLink href="/about" passHref legacyBehavior>
+                    <Link>About</Link>
+                  </NextLink>
+                </Toolbar>
+              </Box>
+            </Box>
+          </AppBar>
+        </Box>
+        <Box flexGrow="1">
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            mt={5}
+          >
+            {children}
+          </Box>{" "}
+        </Box>
+        <Box>Footer</Box>
       </Box>
     </>
   );
